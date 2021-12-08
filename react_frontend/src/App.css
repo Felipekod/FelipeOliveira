@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+:root{
+  --bg-dark: #1A2F3A;
+  --logo-height: 100px;
+  --header-height: 60px;
+  --menu-top-height: 70px;
+  --aside-width: 225px;
+  --footer-height: 40px;
+
+  --shadow: 
+      0 2px 23px 0 rgba(0,0,0,0.1),
+      0 2px 49px 0 rgba(0,0,0,0.06);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* GRID layout */
+
+.app {
+  margin: 0;
+  display: grid;
+  grid-template-columns: var(--aside-width) 1fr;
+  grid-template-rows: 
+              var(--header-height)
+              1fr;
+
+  grid-template-areas: 
+              "header header"
+              "menu content";
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.header {
+  grid-area: header;
+}
+
+aside.menu-area {
+  grid-area: menu;
+}
+
+main.content {
+  grid-area: content;
+}
+
+@media only screen and (max-width: 650px) {
+  :root{
+      --bg-dark: #1A2F3A;
+  
+      --logo-height: 30px;
+      --header-height: 50px;
+      --menu-top-height: 70px;
+      --aside-width: 225px;
+      --footer-height: 40px;
+  
+      --shadow: 
+          0 2px 23px 0 rgba(0,0,0,0.1),
+          0 2px 49px 0 rgba(0,0,0,0.06);
+  }
+
+  .app {
+      margin: 0;
+      display: grid;
+      grid-template-columns: var(--aside-width) 1fr;
+      grid-template-rows: 
+                  var(--header-height)
+                  1fr;
+
+      grid-template-areas: 
+                  "header header"
+                  "content content";
+      height: 100vh;
+      background-color: #f5f5f5;
+  }
+
+  .header {
+      grid-area: header;
+  }
+  
+  aside.menu-area {
+      grid-area: menu;
+  }
+  
+  main.content {
+      grid-area: content;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 576px) {
+  :root{
+      --bg-dark: #1A2F3A;
+  
+      --logo-height: 30px;
+      --header-height: 30px;
+      --menu-top-height: 70px;
+      --aside-width: 225px;
+      --footer-height: 40px;
+  
   }
-  to {
-    transform: rotate(360deg);
+
+  .app {
+      margin: 0;
+      display: grid;
+      grid-template-columns: var(--aside-width) 1fr;
+      grid-template-rows: 
+                  var(--header-height)
+                  1fr;
+
+      grid-template-areas: 
+                  "header header"
+                  "content content";
+      height: 90vh;
+      background-color: #f5f5f5;
+  }
+
+  .header {
+      grid-area: header;
+  }
+  
+  
+  main.content {
+      grid-area: content;
+  }
+}
+
+@media only screen and (max-width: 380px){
+  .app {
+      width: 100vh;
   }
 }

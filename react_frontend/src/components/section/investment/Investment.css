@@ -1,0 +1,11 @@
+
+
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: rgba(84, 157, 230, 0.829);
+  }
+
+
+.form-investment-input{
+    margin-left: 20px;
+}

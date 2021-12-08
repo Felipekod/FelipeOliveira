@@ -1,0 +1,107 @@
+.container-money {
+    margin: auto auto;
+    background-color: rgba(163, 206, 189, 0.233);
+    padding: 10px;
+    border-radius: 15px;
+    height: 95vh;
+}
+
+.card-money{
+    max-width: 80vh;
+    margin: auto auto;
+    background-color: rgba(144, 196, 175, 0.233);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    box-shadow: 6px 6px 20px 3px rgba(87, 112, 93, 0.247)
+}
+
+.card-money h2 {
+    font-size: 3.4rem;
+    color: rgb(22, 22, 22);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+#card-money-inside {
+    background-color: rgba(221, 253, 243, 0.87);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+}
+
+.card-money p {
+    color: rgb(22, 22, 22);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+
+.container-timer {
+    text-align: center;
+}
+
+.container-timer-secs {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.container-timer-secs h3 {
+    margin-left: 10px;
+}
+.container-timer label{
+    font-size: 1.5rem;
+}
+
+.container-timer input{
+    margin-left: 20px;
+    border-radius: 10px;
+    border:rgba(144, 196, 175, 0);
+}
+
+.container-timer-liste {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    list-style-type: none;
+    justify-content:space-around
+}
+
+.btn-musk{
+    height: 70px;
+    width: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+    .card-money p {
+        color: rgb(22, 22, 22);
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .container-timer input{
+        margin-left: 0px;
+    }
+
+    .container-timer-liste {
+        margin: 0px;
+        margin-right: 20px;
+    }
+    .container-timer-liste h3 {
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    #btn-musk-stop{
+        width: 80px;
+        margin-top: 10px;
+    }
+    #btn-musk-start{
+        width: 80px;
+        margin-top: 10px;
+    }
+  }
