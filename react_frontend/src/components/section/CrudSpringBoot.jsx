@@ -6,7 +6,7 @@ import currency from 'currency.js'
 
 const baseUrl = '/api/products'
 const initialState = {
-    produit: {id: '', nom: '', prix: '', rabais: ''},
+    product: {id: '', name: '', price: '', discount: ''},
     list: []
 }
 const config = {mode: 'cors', // no-cors, *cors, same-origin
@@ -45,15 +45,15 @@ class Produits extends Component {
     }
     //Function PUT / POST
     async save() {
-        const {produit} = this.state
+        const {product} = this.state
 
         const requestOptions = {
-            method: (produit.id) ? 'PUT' : 'POST',
+            method: (product.id) ? 'PUT' : 'POST',
             body: JSON.stringify({
-                id: produit.id,
-                nom: produit.nom,
-                prix: parseFloat(produit.prix),
-                rabais: parseFloat(produit.rabais)
+                id: product.id,
+                name: product.name,
+                price: parseFloat(product.price),
+                discount: parseFloat(product.discount)
             }),
             ...config
         };
@@ -65,33 +65,33 @@ class Produits extends Component {
     }
 
     renderLi(){
-        return this.state.list.map(produit => {
+        return this.state.list.map(product => {
             return (
-                <tr key={produit.id}>
-                    <td>{produit.id}</td>
-                    <td>{produit.nom}</td>
-                    <td>{currency(produit.prix).format()}</td>
-                    <td>{produit.rabais}</td>
+                <tr key={product.id}>
+                    <td>{product.id}</td>
+                    <td>{product.name}</td>
+                    <td>{currency(product.price).format()}</td>
+                    <td>{product.discount}</td>
                     <td>
-                        <button  id="btn-editer" className="btn btn-primary" onClick={() => this.load(produit)}>Éditer</button>
-                        <button id="btn-effacer" className="btn btn-danger ml-2" onClick={() => this.remove(produit.id)}>Effacer</button>
+                        <button  id="btn-editer" className="btn btn-primary" onClick={() => this.load(product)}>Éditer</button>
+                        <button id="btn-effacer" className="btn btn-danger ml-2" onClick={() => this.remove(product.id)}>Effacer</button>
                     </td>
                 </tr>
             )
         })
     }
     updateField(event){ //Methode pour mettre à jour le champs du form
-        const produit = {...this.state.produit} //On clone l'utilisateur du state
-        produit[event.target.name] = event.target.value // On utiliste le nom de l'input pour chercher la propriété du 'state'
-        this.setState({produit}) 
+        const product = {...this.state.product} //On clone l'utilisateur du state
+        product[event.target.name] = event.target.value // On utiliste le nom de l'input pour chercher la propriété du 'state'
+        this.setState({product}) 
     }
 
     clear() {
-        this.setState({produit: initialState.produit})
+        this.setState({product: initialState.product})
     }
 
-    load(produit){
-        this.setState( {produit} )
+    load(product){
+        this.setState( {product} )
     }
 
 
@@ -101,22 +101,22 @@ class Produits extends Component {
                 <div className="row">
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Nom</label>
+                            <label>Name</label>
                             <input type="text" 
                                     className="form-control" 
-                                    name="nom" 
-                                    value={this.state.produit.nom}
+                                    name="name" 
+                                    value={this.state.product.name}
                                     onChange={e => this.updateField(e)}
                                     placeholder="Voulez saisir le nom..."></input>
                         </div>
                     </div>
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Prix</label>
+                            <label>Price</label>
                             <input type="text" 
                                     className="form-control"
-                                    name="prix"
-                                    value={this.state.produit.prix}
+                                    name="price"
+                                    value={this.state.product.price}
                                     onChange={e => this.updateField(e)}
                                     placeholder="Voulez saisir le prix">
                             </input>
@@ -126,11 +126,11 @@ class Produits extends Component {
                 <div className="row">
                 <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Rabais</label>
+                            <label>Discount</label>
                             <input type="text" 
                                     className="form-control" 
-                                    name="rabais" 
-                                    value={this.state.produit.rabais}
+                                    name="discount" 
+                                    value={this.state.product.discount}
                                     onChange={e => this.updateField(e)}
                                     placeholder="Voulez saisir le rabais(%) entre 0 et 1..."></input>
                         </div>
