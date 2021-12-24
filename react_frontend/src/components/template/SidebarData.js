@@ -1,7 +1,7 @@
 import React from 'react'
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
-import * as IoIcons from "react-icons/io"
+import * as HiIcons from "react-icons/hi"
 
 export const SidebarData = [
     {
@@ -11,27 +11,27 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Money',
-        path: '/money',
-        icon: <FaIcons.FaMoneyBillAlt />,
-        cName: 'nav-text'
-    },
-    {
-        title: 'Photo-Gallery Framework',
+        title: 'My pictures',
         path: '/ReactPhotoGallery',
-        icon: <FaIcons.FaEnvelopeOpenText />,
+        icon: <HiIcons.HiOutlinePhotograph />,
         cName: 'nav-text'
     },
     {
-        title: 'Calculatrice',
+        title: 'Calculator',
         path: '/calculator/Calculator',
-        icon: <IoIcons.IoMdHelpCircle />,
+        icon: <AiIcons.AiOutlineCalculator />,
         cName: 'nav-text'
     },
     {
         title: 'Investment Calculator',
         path: '/investment/Investment',
-        icon: <IoIcons.IoMdHelpCircle />,
+        icon: <AiIcons.AiOutlineStock />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Money',
+        path: '/money',
+        icon: <FaIcons.FaRegMoneyBillAlt />,
         cName: 'nav-text'
     }
 ]
