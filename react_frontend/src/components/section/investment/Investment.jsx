@@ -77,9 +77,9 @@ export default class tableInvestment extends React.Component {
         return(
             <div className='calculated-investment'>
                 <div>
-                    <h2>End balance: {this.state.table[lastIndexCalculated].endBalance}</h2>
+                    <h2 id='end-balance'>End balance: {this.state.table[lastIndexCalculated].endBalance}</h2>
                 </div>
-                <table className='table table-sm  table-striped table-hover'>
+                <table className='table-responsible table-sm  table-striped table-hover'>
                     <thead className='thead-dark'>
                         <tr>
                             <th>Month</th>
@@ -122,7 +122,7 @@ export default class tableInvestment extends React.Component {
     render(){
         return (
         <Main>
-            <div className='display-4 text-center'>Investment calculator</div>
+            <div id='investment-title' className='display-4 text-center'>Investment calculator</div>
             <hr/>
             <InvestmentForm  click={this.getFields}/>
             <hr/>

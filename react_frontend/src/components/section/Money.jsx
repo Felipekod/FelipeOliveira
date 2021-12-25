@@ -24,6 +24,7 @@ class SalaireForm extends React.Component {
         if(!isNaN(this.state.value)){
             this.props.onSalaireChange(event.target.value)
         }
+        //si la valeur n'est pas numerique on reinitialise la valeur
         else{
             this.setState({value: 0})
         }

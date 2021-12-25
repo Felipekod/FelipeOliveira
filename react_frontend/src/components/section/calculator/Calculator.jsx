@@ -31,6 +31,7 @@ export default class Calculator extends Component {
     componentDidMount(){
         //Donne mobilité à la calculatrice.
         const item = document.getElementById("calculator-mover-select")
+        
         //on recupere la position
 
         item.onmousemove = e => {

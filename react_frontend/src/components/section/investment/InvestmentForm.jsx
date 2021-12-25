@@ -71,7 +71,7 @@ export default class SalaireForm extends React.Component {
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary mt-3" onClick={this.sendFields}>Calculate</button>
+                <button id='btn-calculate' class="btn btn-primary mt-3" onClick={this.sendFields}>Calculate</button>
             </form>
         )
     }

@@ -9,3 +9,34 @@
 .form-investment-input{
     margin-left: 20px;
 }
+
+@media only screen and (max-width: 500px) {
+
+div label{
+    font-size: 0.8rem;
+}
+
+.form-investment-input{
+    margin-left: 0;
+}
+
+#investment-title{
+  font-size: 2rem;
+}
+
+#btn-calculate{
+  margin-top: 0!important;
+}
+
+#end-balance{
+  font-size: 1.2rem;
+}
+
+th{
+  font-size: 0.5rem;
+}
+tr{
+  font-size: 0.5rem;
+}
+
+}

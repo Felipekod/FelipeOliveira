@@ -66,7 +66,7 @@ const BasicRows = () => <ImageGallery photos={photos} />
 
 const PhotoGallery = () => 
     <Main icon="home" title="Exercices 5" subtittle="Portifolio">
-        <h3>Framework responsive react-photo-gallery</h3>
+        <h3>My pictures</h3>
         <BasicRows className='gallery'/>
     </Main>
 
